@@ -1,4 +1,5 @@
 body {
+  display: inline-block;
   background-color: black;
   background: url(backf.jpg);
 }
@@ -14,6 +15,7 @@ body {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  font: courier;
 }
 
 .popMenu {
@@ -54,4 +56,68 @@ body {
   .menu a {
     font-size: 18px;
   }
+}
+
+.landing pre {
+  color: white;
+  font: 50px Comic, sans-serif;
+  width: 400px;
+  margin: 10px;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/*animated border*/
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.landing {
+  position: relative;
+  top: 100%;
+  left: 100%;
+
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  width: 450px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #4d4d4d;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#4d4d4d, #4d4d4d),
+    linear-gradient(#fbb300, #fbb300), linear-gradient(#4d4d4d, #4d4d4d),
+    linear-gradient(#fbb300, #fbb300);
+  animation: rotate 4s linear infinite;
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: rgb(77, 77, 77);
+  border-radius: 5px;
 }

@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon2.ico" />
     <title>Aashiq Adams - Portfolio</title>
   </head>
-  <body>
+  <body onload="typeWriter()">
     <div id="icon">
       <a href="index.html">
         <img src="aashiq7.png" alt="logo" />
@@ -14,7 +15,7 @@
     </div>
 
     <div id="sideBar" class="menu">
-      <h1>Menu:</h1>
+      <h1>Content:</h1>
       <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"
         >&times;</a
       ><br />
@@ -29,7 +30,9 @@
       onclick="openMenu()"
       >&#9776; Menu</span
     >
-
+    <div class="landing">
+      <pre id="typed"></pre>
+    </div>
     <script type="text/javascript" , src="func.js"></script>
   </body>
 </html>
