@@ -8,7 +8,7 @@ function closeMenu() {
 
 var i = 0;
 var txt = "Hello There! \nMy name is Aashiq \nWelcome to my \nonline portfolio";
-var spd = 100;
+var spd = 80;
 function typeWriter() {
   if (i < txt.length) {
     document.getElementById("typed").innerHTML += txt.charAt(i);
